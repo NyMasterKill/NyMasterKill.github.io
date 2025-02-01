@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Математический Калькулятор</title>
+</head>
+<body>
+    <h1>Математический Калькулятор</h1>
+    <form id="calculator-form">
+        <label for="num1">Число 1:</label>
+        <input type="text" name="num1" id="num1" required><br><br>
+        <label for="num2">Число 2:</label>
+        <input type="text" name="num2" id="num2" required><br><br>
+        <label for="operation">Операция:</label>
+        <select name="operation" id="operation" required>
+            <option value="">Выберите операцию</option>
+            <option value="add">Сложение (+)</option>
+            <option value="subtract">Вычитание (-)</option>
+            <option value="multiply">Умножение (*)</option>
+            <option value="divide">Деление (/)</option>
+        </select><br><br>
+        <button type="button" onclick="calculateOperation()">Вычислить операцию</button>
+    </form>
+    <hr>
+    <h2>Вычисление последовательности b(n)</h2>
+    <form id="sequence-form">
+        <label for="sequence_n">Введите n:</label>
+        <input type="text" name="sequence_n" id="sequence_n" required oninput="this.value = this.value.replace(/[^0-9]/g, '')"><br><br>
+        <button type="button" onclick="calculateSequence()">Вычислить последовательность</button>
+    </form>
+    <hr>
+    <h2>Вывод цифр в прямом порядке</h2>
+    <form id="digits-form">
+        <label for="range_a">Введите A:</label>
+        <input type="text" name="range_a" id="range_a" required oninput="this.value = this.value.replace(/[^0-9]/g, '')"><br><br>
+        <label for="range_b">Введите B:</label>
+        <input type="text" name="range_b" id="range_b" required oninput="this.value = this.value.replace(/[^0-9]/g, '')"><br><br>
+        <button type="button" onclick="displayDigits()">Вывести цифры</button>
+    </form>
+    <hr>
+    <div id="calculator-result"></div>
+    <div id="sequence-result"></div>
+    <div id="digits-result"></div>
+    <script src="script.js"></script>
+</body>
+</html>
